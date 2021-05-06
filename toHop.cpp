@@ -11,11 +11,11 @@
 
 using namespace std;
 ll T, n, m, k;
-ll arr[10001][10001];
+ll arr[1001][1001];
 
 void solve()
 {
-    for(int i = 0; i < 10001; i++)
+    for(int i = 0; i < 1001; i++)
         for(int j = 0; j <= i; j++) {
             if(j == 0 || j == i)    arr[i][j] = 1;
             else                    arr[i][j] = (arr[i-1][j-1] + arr[i-1][j])%mod;       
@@ -24,7 +24,7 @@ void solve()
     cin >> T;
     while(T--) {
         cin >> n >> k;
-        cout << arr[n][k];
+        cout << arr[n][k] << endl;
     }
 }
 
