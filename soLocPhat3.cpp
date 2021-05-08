@@ -52,7 +52,7 @@ void solve()
             ans += res[i].size();
         }
         cout << ans << endl;
-        for (int i = 1; i <= n; i++)
+        for (int i = n; i >= 1; i--)
         {
             for (int j = 0; j < res[i].size(); j++)
                 cout << res[i][j] << " ";
